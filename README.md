@@ -38,6 +38,20 @@ When the other machine gets this request, it will need to do this again in rever
 Or in graphic form it travels down, over the physical link and back up:
 ![OSI model connection](https://networksmania.files.wordpress.com/2012/03/osi_model.jpg)
 
+The HTTP protocol is nothing more than an agreement on how to send responses an requests. Spoiler: it's text based. All HTTP requests and responses are plain text. They always have a header and a body. The header gives the protocol name, the status code and the message. The body can contain anything you want to send to the user. 
+
+Example request being sent to a host (e.g. google.com):
+```
+GET / HTTP/1.1
+```
+
+Example response:
+```
+HTTP/1.1 200 OK
+
+Hello, I'm a webserver;
+```
+
 ## Enough talk. Show me the code.
 In this little tutorial we already wrote a little php program that starts listening to an incoming connection. A very simple and basic http web server.
 
